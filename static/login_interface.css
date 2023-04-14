@@ -1,0 +1,80 @@
+
+body{
+    background: rgb(46, 46, 160);
+    background: linear-gradient(90deg, rgba(23,23,25,1) 12%, rgba(32,32,38,1) 56%);
+}
+
+.register{
+    max-width: 70%;
+    opacity: 0.3;
+    border-radius: 15px;
+    position: relative;
+    margin: auto;
+    margin-top: 20%;
+    height: 30%;
+    background-color: rgb(207, 206, 203);
+}
+
+.register h1{
+    color: #131010;
+    text-align: center;
+    font-family: 'Lucida Sans';
+}
+
+.register::before{
+    background-color: rgba(217, 220, 223, 0.418);
+    transform: rotate(3deg);
+    z-index: -1;
+    position: absolute;
+    content: "";
+    inset: 0;
+    border-radius: 15px;
+}
+.back_btn a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.back_btn{
+    background: rgb(58,77,180);
+    background: linear-gradient(90deg, rgba(58,77,180,1) 2%, rgba(103,47,131,1) 50%);
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+
+}
+
+.back_register{
+    background: rgb(58,77,180);
+    background: linear-gradient(90deg, rgba(58,77,180,1) 2%, rgba(103,47,131,1) 50%);
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    margin-left: 30%;
+    margin-right: 10%;
+    color: white;
+    font-size: 20px;
+
+}
+
+.btn_container{
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.input_data{
+    margin-left: 25%;
+    margin-bottom: 1%;
+}
+.input_data label{
+    font-family: Alef;
+    font-size: 23px;
+}

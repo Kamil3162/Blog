@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@100&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&family=Nunito:wght@200&family=Poppins:wght@100&family=Raleway:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto+Mono:wght@300&display=swap');
+/*
+Druga czcionka font-family: 'Montserrat', sans-serif;
+
+ */
+.navbar{
+    font-weight: 800;
+    gap: 10px;
+    padding: 0;
+    display: grid;
+    hyphens: auto;
+    border-radius: 12%;
+}
+.opcje{
+    margin: auto;
+}
+.opcje ul{
+    list-style: none;
+    margin: auto;
+    height: auto;
+    padding: 0;
+    justify-content: right;
+    grid-template-columns: 2fr 2fr 2fr;
+}
+.menu-icon{
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+li a{
+    color: antiquewhite;
+}
+.opcje li{
+    font-family: Raleway;
+    list-style-type: none;
+    float: left;
+    margin: 20px 40px;
+    border-radius: 15%;
+    transition: 0.5s;
+    font-size: 20px;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    display: block;
+    word-wrap: break-word;
+}
+.opcje a:link{
+    text-decoration: none;
+}
+#menulist{
+}
+li:nth-child(6){
+    display: none;
+}
+.photo img {
+    vertical-align: middle;
+    max-width: 100%;
+    max-height: 300px;
+    padding: 4px;
+    border-radius: 15px;
+}
+
+body{
+    /*background-image: url("../static/c12.jpg");
+    image-resolution: 300dpi;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;*/
+    background: rgb(23,23,25);
+    background: linear-gradient(90deg, rgba(23,23,25,1) 12%, rgba(32,32,38,1) 56%);
+}
+
+/*
+.entrace_text{
+    color: white;
+    margin: 10px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 60px;
+    font-weight: bold;
+    border-bottom: 5px solid darkorange;
+    border-collapse: separate;
+    border-spacing: 15px 50px;
+    padding-bottom: 20px;
+}
+*/
+.line{
+    border-collapse: separate;
+    border-spacing: 15px 50px;
+    margin: auto;
+    background-image: url("/static/python.png");
+    height: 600px;
+    width: 70%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    position: relative;
+    border-radius: 15px;
+    padding: 20px;
+}
+.line_title{
+    font-family: Candara;
+    text-align: right;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.line_story{
+    font-family: Raleway;
+    float: right;
+    font-size: 30px;
+    word-wrap: break-word;
+    width: 50%;
+}
+.line_btn button{
+    font-family: Raleway;
+    left: 0;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 15px;
+    height: 40px;
+    width: 90px;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    background-color: white;
+    color: black;
+    padding: 0;
+    text-decoration: none;
+}
+.line_btn:hover button{
+    background-color:cornsilk;
+}
+.srodek{
+    width: 60%;
+    height: 60%;
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    margin: auto;
+    padding: 20px;
+    opacity: 0.9;
+}
+.srodek::before{
+    background-color: rgba(255,255,255,.15);
+    transform: rotate(3deg);
+    z-index: -1;
+    position: absolute;
+    content: "";
+    inset: 0;
+    border-radius: 15px;
+}
+.post{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 10px;
+}
+.title{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    float: left;
+    border-right: 4px solid white;
+    margin-right: 60px;
+    opacity: 0.8;
+}
+
+.content{
+    color: black;
+    font-size: 20px;
+    float: right;
+}
+.content #entrace_title_post{
+    font-family: Montserrat;
+    font-weight: 800;
+    height: 60px;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    word-wrap: break-word;
+}
+.content #entrace_text_post{
+    font-family: Work Sans;
+    font-weight: 600;
+}
+
+.entire_project{
+    margin: 20px;
+    background-color: white;
+}
+
+.stopka{
+    bottom: 0;
+    width: 100%;
+    margin-top:200px;
+    left: 0;
+    height: 4rem;
+    text-align: center;
+    position:relative;
+    opacity: 0.2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid white;
+    background: rgb(7,7,10);
+    background: linear-gradient(90deg, rgba(7,7,10,1) 0%, rgba(30,30,96,1) 56%);
+}
+.copyrights p{
+    border-right: 2px solid white;
+    color: black;
+}
+.stopka p{
+    color: white;
+    font-size: 10px;
+    font-weight: 200;
+}
+
+.zawartosc{
+    position: relative;
+    background-color: white;
+    /*display: grid;
+    grid-template-columns: 4fr 1fr;*/
+}
+/* Part responsible for home display post */
+.post_repository{
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 4fr 1fr;
+    /* margin-left: 30px; */
+    background-color: #cecbcb;
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(218, 215, 215, 0.8); /* 0.1 alpha = 10% opacity */
+    width: 50%;
+    left: 25%;
+    position: relative;
+    height: 110px;
+}
+.zawartosc a{
+    text-decoration: none;
+}
+.title_post{
+    font-size: 40px;
+    font-weight: 800;
+    font-family: monospace;
+    text-align: center;
+    color: #080808;
+}
+.photo_image img{
+    max-width: 100%;
+    align-items: center;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.post_story{
+    position: absolute;
+    color: black;
+    font-family: Candara;
+    display: inline-block;
+    word-wrap: break-word;
+    font-weight: 600;
+    max-width: 75%;
+    font-size: 20px;
+}
+
+.tech{
+    width: 65%;
+    position: relative;
+    margin: auto;
+
+}
+
+.tech_list ul{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+    background-repeat: no-repeat;
+    grid-auto-rows: minmax(300px, auto);
+}
+
+.tech_list img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: contain;
+}
+#explote_home{
+    background-color: white;
+    width: 140px;
+    height: 60px;
+    border-radius: 15px;
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 20px;
+    display: block;
+
+}
+
+#explote_home a{
+    text-decoration: none;
+    color: black;
+}
+
+/* part of add new post */
+.post_form #id_title{
+    width: 600px;
+    padding: 30px;
+}
+.post_form #id_image{
+    width: 600px;
+    padding: 30px;
+}
+
+/* post description - css */
+
+.post_url_view{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.post_url_photo{
+    float: left;
+    width: 300px;
+    height: 200px;
+}
+.post_url_photo img{
+    width: inherit;
+    height: inherit;
+    border-radius: 10px;
+
+}
+.post_url_content{
+    color: white;
+    font-weight: 600;
+    word-break: break-all;
+    font-family: 'Roboto Mono', monospace;
+    color: antiquewhite;
+}
+.post_url_title{
+    text-align: center;
+    padding: 20px;
+    color: antiquewhite;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Roboto Mono', monospace;
+}
+.post_view{
+    position: relative;
+    text-align: right;
+    display: inline-block;
+    margin-left: 100px;
+    margin-right: 150px;
+}
+
+.right_panel{
+    width: 80%;
+    border: 2px solid white;
+    border-radius: 15px;
+    text-align: center;
+    background-color: white;
+    border-right: 130px;
+    display: inline-block;
+    word-break: break-all;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 600;
+    height: 200px;
+}
+.right_panel img{
+    float: left;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 40px;
+    margin: 15px 10px ;
+}
+.right_panel button{
+    background: rgb(85, 132, 225);
+    font-family: 'MONTSERRAT';
+    color: white;
+    border-radius: 15px;
+    width: 120px;
+    font-size: 25px;
+    font-weight: 800;
+    transition: 2s background-color ease-in-out;
+    position: sticky;
+
+
+}
+.right_panel button:hover{
+    background: rgb(58,77,180);
+    background: linear-gradient(90deg, rgba(58,77,180,1) 2%, rgba(29,161,253,1) 50%);
+    box-shadow: 1px 2px 3px 6px #3c55b0;
+}
+.right_panel .twitter_description{
+    padding: 10px;
+    margin-top: 15px;
+}
+
+/* media part */
+@media only screen and (max-width: 600px) {
+    .content{
+      font-size: 40px;
+        color: #671010
+    }
+    .srodek{
+        width: 60%;
+        height: 30%;
+        display: block;
+    }
+    .menu-icon{
+        display: block;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    #rozwiniecie{
+        display: block;
+        color: white;
+        top: 0;
+    }
+    #menulist li{
+        overflow: hidden;
+    }
+    .post_repository{
+        width: 60%;
+        
+    }
+    .post_url_view{
+        display: block;
+    }
+    .post_view{
+        display: flow;
+        margin-left: 10%;
+        margin-bottom: 70px;
+    }
+    .post_view img{
+        width: 100%;
+        margin: auto;
+    }
+    .post_url_content{
+        width: 300px;
+        text-align: justify;
+        margin-right: 0;
+    }
+    .right_panel{
+        display: block;
+        margin: auto;
+    }
+    .post_repository .photo_image{
+        display: none;
+    }
+    .post_repository{
+        height: 35%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .post{
+        display: block;
+    }
+    .srodek{
+        width: 60%;
+        height: 30%;
+        display: block;
+    }
+    .photo img{
+        width: 100%;
+        height: 100%;
+    }
+    .content{
+      font-size: 40px;
+        color: #cecbcb
+    }
+    .content #entrace_title_post{
+        font-size: 40px;
+        height: auto;
+    }
+    .tech_list ul{
+        display: block;
+    }
+    .opcje{
+        display: block;
+    }
+
+    .opcje li{
+        text-align: center;
+        margin-left: 30%;
+    }
+    #explote_home{
+        margin: auto;
+    }
+    .photo_image{
+        height: 50%;
+    }
+    .srodek{
+        height: 25%;
+    }
+    .content #entrace_text_post {
+    font-family: Work Sans;
+    font-weight: 600;
+        font-size: 15px;
+        text-align: center;
+
+    }
+}
+
+

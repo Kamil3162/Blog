@@ -1,0 +1,161 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+</head>
+<body>
+<div class="all_components">
+    <div class="navbar">
+        <div class="opcje">
+                <ul id="menulist">
+                    <li>
+                        <a href="{% url 'post_list' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'projects_list' %}">Projects</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'create_thread' %}">Create Project</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                        <li>
+                            <a href="{% url 'log_out' %}">Logout</a>
+                        <li>
+                              Hi {{ request.user }}
+                        </li>
+                        </li>
+                        {% else %}
+                        <li>
+                        <a href="{% url 'register' %}">Register</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'login' %}">Login</a>
+                        </li>
+                    {% endif %}
+
+                    <img src="/static/icon_nav.png" class="menu-icon" width="30" height="40" onclick="tooglemenu()">
+                </ul>
+
+        </div>
+    </div>
+        {% block start_element %}
+    <!--
+    <div class="line">
+        <div class="line_title">
+            Python is quite interesting.
+        </div>
+        <div class="line_story">
+            Python exelent language to do a lot of projects from various subjects.
+            This website is based on Django those is a python framework.
+
+        </div>
+        <div class="line_btn">
+            <button>
+                <a href="https://www.python.org/">Dowload</a>
+            </button>
+        </div>
+    </div>
+    -->
+    <div class="srodek">
+
+        <div class="control_panel">
+        </div>
+        {% block home_page %}
+        {% endblock %}
+
+        <div class="post">
+            {% block content %}
+            {% endblock content%}
+
+                <div class="title">
+                    <div class="photo">
+                        <img src="/static/bc.jpg">
+                    </div>
+                </div>
+                <div class="content">
+                    <p id="entrace_title_post">Welcome on my website!</p>
+                    <p id="entrace_text_post">Nice to see you on my website
+
+                    </p>
+                </div>
+
+            {% block detail %}
+            {% endblock detail%}
+        </div>
+    </div>
+
+    <div class="tech">
+
+        <div class="tech_list">
+            <ul>
+                <li id="Django">
+                    <img src="/static/learning-django.jpg">
+                    <button id="explote_home">
+                        <a href="https://www.djangoproject.com/">Explore</a>
+                    </button>
+                </li>
+                <li id="Python">
+                    <img src="/static/PythonI.png">
+                    <button id="explote_home">
+                        <a href="https://www.python.org/">Explore</a>
+                    </button>
+                </li>
+                <li id="CSS">
+                    <img src="/static/CSS.png">
+                    <button id="explote_home">
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Explore</a>
+                    </button>
+
+                </li>
+                <li id="HTMl">
+                    <img src="/static/HTML.png">
+                    <button id="explote_home">
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Explore</a>
+                    </button>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+        {% endblock start_element %}
+
+    <div class="stopka">
+        <p class="copyrights">
+            All right reserved ©.
+            Owner of this website is Kamil Hołub.
+        </p>
+        <p class="social_media">
+            Esa frajerzy
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script>
+    const article = document.querySelectorAll('.post_story');
+
+    article.forEach(element => {
+        if(element.innerHTML.length > 100){
+            const text = element.textContent;
+            element.textContent = text.substring(0, 150) + '...';
+            //preRange.selectNodeContents(article);
+            //preRange.setEnd(range.startContainer, range.startOffset);
+        }
+    });
+    var menulist = document.getElementById("menulist");
+    menulist.style.maxHeight = "0px";
+    function tooglemenu(){
+        if(menulist.style.maxHeight == "0px"){
+            menulist.style.maxHeight = "250px";
+        }
+        else {
+            menulist.style.maxHeight = "0px";
+        }
+    }
+</script>

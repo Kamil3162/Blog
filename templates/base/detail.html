@@ -1,0 +1,29 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block start_element %}
+    <div class="zawartosc">
+        <div class="posts">
+            {% for post in posts %}
+                <a href="{% url 'post_detail' title=post.title%}"><div class="post_repository">
+                    <div class="post_context">
+                        <div class="title_post">
+                            {{ post.title }}
+                        </div>
+                        <div class="post_story">
+                            {{ post.content }}
+                        </div>
+                    </div>
+                    <div class="photo_image">
+                    {% for siimage in post.image_set.all %}
+                        <img src="{{ siimage.image.url }}"  height="120" width="130">
+                    </div>
+                </div></a>
+                    {% endfor %}
+            <br>
+            {% endfor %}
+
+        </div>
+
+    </div>
+{% endblock %}
+

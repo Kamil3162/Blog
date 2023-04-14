@@ -1,0 +1,13 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for photo in photos %}
+         <img src="/{{ BASE_DIR }}/{{ photo.image }}" width="120">
+    {% endfor %}
+</body>
+</html>

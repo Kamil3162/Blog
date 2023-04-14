@@ -1,0 +1,73 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block start_element %}
+    <div class="post_url_view">
+
+        <div class="post_view">
+            <div class="post_url_title">
+                {{ post_detail.title }}
+            </div>
+            <div class="post_url_photo">
+                {% for siimage in post_detail.image_set.all %}
+                    <img src="{{ siimage.image.url }}">
+                {% endfor %}
+            </div>
+            <div class="post_url_content">
+                {{ post_detail.content }}
+            </div>
+        </div>
+        <div class="right_panel">
+            <img src="/static/python.png" width="50" height="50">
+            <div class="twitter_description">
+                jhdsahjdsajdsahjhufgidshfuidsahuifsdahiufusdafhuidsahufidsagujifdasugfgudsafgdsgufidsaguifdsagu
+            </div>
+            <button name="follow">Follow</button>
+        </div>
+        {% if user.is_authenticated %}
+            <form id="add_comment" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ post_form }}
+                <button type="submit" id="submit_comment">Add comment</button>
+
+            </form>
+        {% endif %}
+        <div class="comments">
+            {% for comment in comments %}
+                {{ comment.user }}
+                {{ comment.text }}
+            {% endfor %}
+        </div>
+    </div>
+    <script>
+
+        function comment_show(){
+            var comment_section = document.getElementById('comments');
+            comment_section.style.display = 'hidden';
+        }
+
+        function refresh_website(){
+            window.location.reload();
+        }
+
+        function refresh_comm(){
+            var form = document.getElementById("add_comment");
+            if (form){
+                form.onsubmit = function (){
+                    window.location.reload();
+                    console.log("Niby jest refresh");
+                };
+            }
+            else {
+                console.log("Nic  nie dziala");
+            }
+        }
+
+        $('add_comment').submit(function(event) {
+            event.preventDefault();
+            $.post(this.action, $(this).serialize(), function(response) {
+              window.location.href = response.redirect_url;
+            });
+        });
+
+    </script>
+{% endblock %}

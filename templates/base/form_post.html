@@ -1,0 +1,23 @@
+{% extends 'base/main.html' %}
+{% block start_element %}
+    <div class="post_form">
+        <form action="{% url 'create_thread' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            Title {{ form.title }}
+                    <br>
+
+            Content {{ form.content }}
+            <br>
+
+            <label> Dodaj zdjecie</label>
+            <br>
+            <br>
+                {{ image_add.management_form }}
+                {% for field in image_add %}
+                    {{ field }} <br>
+                {% endfor %}
+            <button type="submit"> Upload </button>
+        </form>
+    </div>
+{% endblock %}
+
